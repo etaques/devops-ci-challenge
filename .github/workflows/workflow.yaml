@@ -58,6 +58,7 @@ jobs:
         tags: ghcr.io/etaques/devops-ci-challenge:latest
         
   deploy-to-ecs:
+    needs: test-and-build
     runs-on: ubuntu-latest
     steps:
     - name: Configure AWS credentials
