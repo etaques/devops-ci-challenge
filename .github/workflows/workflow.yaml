@@ -41,5 +41,6 @@ jobs:
         ls -lha build
     - name: build docker image
       run: |
+        ls -lha
         docker build ${github.workspace}/docker/Dockerfile -t ghcr.io/etaques/devops-ci-challenge:latest
         
