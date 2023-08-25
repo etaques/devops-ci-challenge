@@ -37,10 +37,8 @@ jobs:
     - name: Debug files
       run: |
         cd codebase/rdicidr-0.1.0/
-        ls -lha
         ls -lha build
     - name: build docker image
-      run: |
-        ls -lha ./docker        
-        docker build ./docker/Dockerfile -t ghcr.io/etaques/devops-ci-challenge:latest
+      run: |       
+        docker build -f ./docker/Dockerfile -t ghcr.io/etaques/devops-ci-challenge:latest
         
